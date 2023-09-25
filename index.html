@@ -16,12 +16,7 @@
         color: #fff;
     }
     
-    
-    .logo {
-    	font-size: 30px;
-      
-        /*position: fixed;*/
-    }
+
     
     section {
     	min-height: 57vh;
@@ -35,15 +30,20 @@
     
     .hero {
         text-align: center;
+        background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.5)), url("https://images.pexels.com/photos/1251861/pexels-photo-1251861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+      	background-size: cover;
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;
+      	background-position: center right;
         
     }
     
     .heroHeading {
-    	font-size: 40px;
+    	font-size: 50px;
     }
     
     .heroDesc {
-    	font-size: 30px;
+    	font-size: 40px;
     }
     
     button {
@@ -91,14 +91,14 @@
     display: inline;
 }
 
-.header ul a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-    position: relative;
-    font-size: 1.4em;
-    margin-left: 40px;
-}
+	.header ul a {
+    	text-decoration: none;
+    	color: #fff;
+    	font-size: 25px;
+    	position: relative;
+    	font-size: 1.4em;
+    	margin-left: 40px;
+	}
 
 .loginPopup, .heroBtn {
     width: 130px;
@@ -119,19 +119,19 @@
     right: 100px;
 }
 
-.navbar a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.5s;
-}
+	.navbar a::after {
+    	content: '';
+    	position: absolute;
+    	left: 0;
+    	bottom: -6px;
+    	width: 100%;
+    	height: 2px;
+    	background: #fff;
+    	border-radius: 5px;
+    	transform-origin: right;
+    	transform: scaleX(0);
+    	transition: transform 0.5s;
+	}
 
 	.navbar a:not(.icon):hover::after {
     	transform-origin: right;
@@ -327,7 +327,6 @@
 			</div>
 		</div>
 	</div>
-    <img style="position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: auto; opacity: 0.2; object-fit: cover; object-position: center top;" src="https://images.pexels.com/photos/1251861/pexels-photo-1251861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></img>
 </section>
 <section style="background-color: #fff; color: #53ADDD;">
 	<div>e</div>

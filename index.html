@@ -16,16 +16,11 @@
         color: #fff;
     }
     
-
-    
     section {
     	min-height: 57vh;
         height: fit-content;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        
     }
     
     .hero {
@@ -35,6 +30,10 @@
       	background-repeat: no-repeat;
       	background-attachment: fixed;
       	background-position: center right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         
     }
     
@@ -69,7 +68,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 40px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -194,6 +193,23 @@
         	flex-direction: column;
     	}
 	} 
+    
+    .product {
+    	background-color: #fff; 
+        color: #000;
+        display: flex; /*change to grid later*/
+        align-items: center;
+        justify-content: center;
+        font-size: 55px;
+    }
+    
+    .product img {
+    	width: 400px; 
+        height: auto;
+    	/*position: absolute; 
+        top: 30%; left: 5vw;*/ 
+        
+    }
 
  
    	/***mouse stuff below***/
@@ -328,11 +344,17 @@
 		</div>
 	</div>
 </section>
-<section style="background-color: #fff; color: #53ADDD;">
-	<div>e</div>
+<section class="product">
+    	<img src="https://assets.stickpng.com/images/5cb0633d80f2cf201a4c3253.png"></img>
+        <div>
+        	<div>Wowza phone</div>
+        	<div>Very cool</div>
+        </div>
 </section>
 <section style="background-color: black;">
-	<div>e</div>
+	<div>Example 1</div>
+    <div>Example 2</div>
+    <div>Example 3</div>
 </section>
 <script>
 function hamburger() {

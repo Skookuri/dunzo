@@ -18,9 +18,9 @@
     }
     
     section {
-    	min-height: 57vh;
         width: 100%;
-        height: 100%;
+        min-height: fit-content;
+        height: 80vh;
     }
     
     section:not(.hero) {
@@ -393,6 +393,18 @@
     .functions p {
     	margin-right: 13px;
     }
+    
+    .aligner, .below {
+  		display: flex;
+  		justify-content: center;
+  		flex-direction: column;
+  		align-items: center;
+	}
+
+	.aligner::before { content: ''; }
+	.aligner::before, .below {
+  		flex: 1;
+	}
 </style>
 
 </head>
@@ -409,14 +421,14 @@
     	</ul>
     </nav>
 </header>
-<section class="hero">
+<section class="hero aligner">
 	<div style="max-width: 75%;">
     	<div class="heroHeading">Scheduling classes, made easier.</div>
     	<div class="heroDesc">No more registration stress- that's all <b>dunzo.</b></div>
     	<br>
     	<button class="heroBtn">Start Now</button>
     </div>
-    <div class="wrapper">
+    <div class="wrapper below">
 		<div class="mouse_scroll default">
 			<div>
 				<span class="m_scroll_arrows unu"></span>

@@ -234,6 +234,7 @@
         width: 24px;
         height: 100px;
         margin-top: 13px;
+        cursor: pointer;
     }
 
     .m_scroll_arrows {
@@ -326,6 +327,7 @@
         border-color: #53ADDD;
         transition: 500ms ease;
         cursor: pointer;
+        background-position: 500%;
     }
     
     .functions {
@@ -354,17 +356,21 @@
     /*centering center of footer*/
     footer {
   		display: flex;
-        
+       	
         flex-direction: row;
         align-items: center;
         justify-content: space-between; 
         
         background-color: #53ADDD;
-        
-        
         color: #000;  
         padding: 10px;
 	}
+    
+    .fixedFooter {
+    	position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
     
 	.footerInfo {
   		flex: 1;
@@ -532,7 +538,7 @@
     	<button class="heroBtn">Start Now</button>
     </div>
     <div class="wrapper below">
-		<div class="mouse_scroll default">
+		<div class="mouse_scroll default" onclick="document.getElementById('app').scrollIntoView()">
 			<div>
 				<span class="m_scroll_arrows unu"></span>
 				<span class="m_scroll_arrows doi"></span>
@@ -652,10 +658,11 @@ function hamburger() {
 $(window).scroll(function () {
     var scrollPos = $(document).scrollTop();
     var secondSectionPos = $(".product").offset().top - 10;
-    var thirdSectionPos = $(".functions").offset().top - 10;
-    var fourthSectionPos = $(".contact").offset().top - 10;
+    var thirdSectionPos = $(".functions").offset().top - 100;
+    var fourthSectionPos = $(".contact").offset().top - 100;
 
     if (secondSectionPos <= scrollPos && scrollPos < thirdSectionPos) {
+        $("header").css("background-color", "#fff");
         $("nav li a").css("color", "#000");
         $(".logo").css("color", "#000");
         $(".loginPopup").css({
@@ -665,11 +672,13 @@ $(window).scroll(function () {
         $(".homelink").fadeIn();
         $(".navbar a::after").css("background", "#000");
         $('.navbar a').addClass('changed');
+        
     } else {
         $("nav").css({
             "background-color": "transparent",
             "border-bottom": "none"
         });
+        $("header").css("background-color", "transparent");
         $("nav li a").css("color", "#fff");
         $(".logo").css("color", "#fff");
         $(".loginPopup").css({
@@ -683,9 +692,17 @@ $(window).scroll(function () {
 
     if (scrollPos >= thirdSectionPos && scrollPos < fourthSectionPos) {
         $(".logo").css("color", "#53ADDD");
+        $("header").css("background-color", "#000");
     }
+    
+    /*if (scrollPos > fourthSectionPos) {
+    	$("footer").addClass("fixedFooter");
+        
+    } else {
+    	$("footer").removeClass("fixedFooter");
+    }*/
 });
-
+</script>
 </script>
 </body>
 </html>

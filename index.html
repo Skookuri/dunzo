@@ -425,8 +425,8 @@ function hamburger() {
 
 $(window).scroll(function () {
     var scrollPos = $(document).scrollTop();
-    var secondSectionPos = $(".product").offset().top - 10px;
-    var thirdSectionPos = $(".functions").offset().top - 10px;
+    var secondSectionPos = $(".product").offset().top - 10;
+    var thirdSectionPos = $(".functions").offset().top - 10;
 
     if (secondSectionPos <= scrollPos && scrollPos < thirdSectionPos) {
         $("nav li a").css("color", "#000");

@@ -422,10 +422,11 @@ function hamburger() {
         x.className = "navbar";
     }
 }
+
 $(window).scroll(function () {
     var scrollPos = $(document).scrollTop();
-    var secondSectionPos = $(".product").offset().top;
-    var thirdSectionPos = $(".functions").offset().top;
+    var secondSectionPos = $(".product").offset().top - 10px;
+    var thirdSectionPos = $(".functions").offset().top - 10px;
 
     if (secondSectionPos <= scrollPos && scrollPos < thirdSectionPos) {
         $("nav li a").css("color", "#000");
